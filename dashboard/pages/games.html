@@ -22,7 +22,20 @@ a:hover { text-decoration: none; color:#ddd; }
 
 a:active { text-decoration: none; color:#ddd; }
 
- .card {
+ .card1 {
+ color: #ddd;
+ overflow: hidden;
+ position: absolute;
+ left: 50%;
+ bottom: 50%;
+transform: translateX(-30%);
+ box-shadow: 0 4px 8px 0 #AA3838;
+transition: 0.3s;
+height: 25%;
+width: 10%;
+ border-radius: 5px;
+            }
+.card2 {
  color: #ddd;
  overflow: hidden;
  position: absolute;
@@ -72,7 +85,7 @@ width: 10%;
             <a id="ChatGPT" href="#ChatGPT">ChatGPT</a>
             <a id="Account" href="#Account">Account</a>
           </div>
-          <div class="card">
+          <div class="card1" class="card">
             <a onclick="Game1()">
             <img src="../../games/assets/pics/action/OvO/Banner.png" alt="GameCard" style="width:100%">
             <div class="container">
@@ -81,7 +94,7 @@ width: 10%;
           </a>
           </div>
         
-                  <div class="card">
+                  <div class="card2" class="card">
             <a onclick="Game2()">
             <img src="../../games/assets/pics/action/OvO/Banner.png" alt="GameCard" style="width:100%">
             <div class="container">
