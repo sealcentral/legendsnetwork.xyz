@@ -23,7 +23,6 @@ a:hover { text-decoration: none; color:#ddd; }
 a:active { text-decoration: none; color:#ddd; }
 
  .card {
- cursor: pointer;
  color: #ddd;
  overflow: hidden;
  position: absolute;
@@ -78,6 +77,15 @@ width: 10%;
             <img src="../../games/assets/pics/action/OvO/Banner.png" alt="GameCard" style="width:100%">
             <div class="container">
               <h4><b>OvO</b></h4> 
+            </div>
+          </a>
+          </div>
+        
+                  <div class="card">
+            <a onclick="Game2()">
+            <img src="../../games/assets/pics/action/OvO/Banner.png" alt="GameCard" style="width:100%">
+            <div class="container">
+              <h4><b>Boxing Randoms</b></h4> 
             </div>
           </a>
           </div>
@@ -155,6 +163,33 @@ width: 10%;
   function Game1() {
     var urlObj = new window.URL(window.location.href);
     var input = "action/OvO/"; // BASE64 M/C/Y
+    var url = "https://shadymoon.xyz/games/" + input ; //Url sugestions here, doesnt make much sense to use the actual base 64 as much rather use "input;" because then it'd be useless
+    if (url) {
+        var win;
+        
+            if (win) {
+                win.focus();
+            } 
+            else {
+                win = window.open();
+                win.document.body.style.margin = '0';
+                win.document.body.style.height = '100vh';
+                var iframe = win.document.createElement('iframe');
+                iframe.style.border = 'none';
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.margin = '0';
+                iframe.src = url;
+                win.document.body.appendChild(iframe);
+            }
+            document.querySelector('button').style.background='#ff5148';
+            document.querySelector('button').innerHTML="Launched!"
+        };
+}
+
+  function Game2() {
+    var urlObj = new window.URL(window.location.href);
+    var input = "Sports/Boxing-Random/"; // BASE64 M/C/Y
     var url = "https://shadymoon.xyz/games/" + input ; //Url sugestions here, doesnt make much sense to use the actual base 64 as much rather use "input;" because then it'd be useless
     if (url) {
         var win;
